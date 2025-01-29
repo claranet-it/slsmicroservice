@@ -1,4 +1,5 @@
 import fastify from 'fastify'
+import awsLambdaFastify from '@fastify/aws-lambda'
 
 const port = 5100
 const server = fastify()
@@ -9,4 +10,4 @@ server.listen({ port }, () => {
     console.log(`http://localhost:${port}/`)
 })
 
-export default server
+export const lambda = awsLambdaFastify(server)
