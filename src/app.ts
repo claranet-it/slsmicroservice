@@ -8,3 +8,5 @@ server.register(import('./routes'))
 server.listen({ port }, () => {
     console.log(`http://localhost:${port}/`)
 })
+
+export default server
